@@ -1,0 +1,26 @@
+name = Arsls Theme 
+description = A clean modern theme designed to be responsive for mobile as well as desktop.
+core = 7.x
+
+; CSS
+stylesheets[all][] = stylesheets/main.css
+stylesheets[all][] = stylesheets/animation.css
+
+; JS 
+scripts[] = js/about_tree.js
+scripts[] = js/animations.js
+scripts[] = js/breakpoints.js
+scripts[] = js/colors.js
+scripts[] = js/comon.js
+; scripts[] = js/content_grid.js
+scripts[] = js/js_links.js
+scripts[] = js/nav_bar.js
+; scripts[] = js/splashpage.js
+scripts[] = js/outreach.js
+
+; Regions
+regions[content] = Content
+regions[below_content] = Below Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom

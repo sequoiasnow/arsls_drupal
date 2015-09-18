@@ -1,0 +1,1 @@
+slideUpAnimationSelectors.push('.content-grid .grid-element .container');

@@ -1,0 +1,137 @@
+$icon-background-color: #77C7D8;
+
+$icon-size: 100px;
+$icon-size-mobile: 25vw;
+
+.about-tree {
+    width: 60%;
+    position: relative;
+    overflow: visible;
+    margin: {
+        left: 20%;
+        right: 20%;
+    }
+
+    .central-line {
+        position: absolute;
+        height: 100%;
+        z-index: -100;
+        top: 0;
+        left: 0;
+        width: 50%;
+        border-right: 1px solid rgba(200, 200, 200, 0.4);
+
+        @include breakpoint($medium) {
+            display: none;
+        }
+    }
+
+    ul {
+        list-style: disc;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include breakpoint($medium) {
+        width: 100%;
+        margin: 0;
+
+        margin-bottom: $icon-size-mobile * 1.3;
+    }
+
+}
+
+.about-tree .row {
+    @include box-sizing(border-box);
+    @include clearfix;
+
+    width: 100%;
+    position: relative;
+    min-height: 100px;
+    height: auto;
+    clear: both;
+    list-style-type: none;
+    overflow: visible;
+
+    &:last-child {
+        margin-bottom: 105px;
+        overflow: visible;
+    }
+
+    .content {
+        width: 300px;
+        width: calc(47% - #{$icon-size / 2});
+    }
+
+    .icon {
+        @include opacity(0);
+
+        position: absolute;
+        top: $icon-size / 2;
+        z-index: 100;
+
+        border-radius: 50%;
+        background-color: $icon-background-color;
+        height: $icon-size;
+        width: $icon-size;
+        text-align: center;
+
+        * {
+            text-align: center;
+        }
+
+        i {
+            font-size: $icon-size / 1.5;
+            line-height: $icon-size / 0.95;
+            color: white;
+        }
+    }
+
+    &:nth-child(2n) {
+        .icon {
+            left: 0.1 * $icon-size;
+        }
+
+        .content {
+            text-align: left;
+            float: right;
+        }
+    }
+
+    &:nth-child(2n + 1) {
+        .icon {
+            right: 0.1 * $icon-size;
+        }
+
+        .content {
+            text-align: right;
+            float: left;
+        }
+    }
+
+    @include breakpoint($medium) {
+        margin-bottom: $icon-size-mobile * 1.3;
+        overflow: visible;
+
+        .icon {
+            top: 110%;
+            width: $icon-size-mobile;
+            height: $icon-size-mobile;
+
+            > i {
+                font-size: $icon-size-mobile / 1.5;
+                line-height: $icon-size-mobile;
+                color: white;
+            }
+        }
+
+        .content {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            float: left !important;
+            text-align: left !important;
+            padding: 20px;
+        }
+    }
+}

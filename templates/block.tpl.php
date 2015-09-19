@@ -44,10 +44,16 @@
  * @ingroup themeable
  */
 ?>
-<div id="<?php print $block_html_id; ?>">
-<?php if ($block->subject): ?>
-  <div class="title"><h3><?php print $block->subject ?></h3></div>
-<?php endif;?>
+<div id="<?php print $block_html_id; ?>" class="block <?php print $classes; ?>">
 
-    <?php print $content ?>
-</div>
+<?php if ( $block->subject ) : ?>
+
+  <div class="title">
+      <h3><?php print $block->subject; ?></h3>
+  </div>
+
+<?php endif;?>
+    <div class="block-content">
+        <?php print $content; ?>
+    </div>
+</div> <!-- .block -->

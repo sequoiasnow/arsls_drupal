@@ -1,12 +1,12 @@
-name = Arsls Theme 
+name = Arsls Theme
 description = A clean modern theme designed to be responsive for mobile as well as desktop.
 core = 7.x
 
 ; CSS
+stylesheets[all][] = https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
 stylesheets[all][] = stylesheets/main.css
-stylesheets[all][] = stylesheets/animation.css
 
-; JS 
+; JS
 scripts[] = js/about_tree.js
 scripts[] = js/animations.js
 scripts[] = js/breakpoints.js

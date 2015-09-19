@@ -1,0 +1,32 @@
+#nav-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: $nav-height;
+    background-color: $nav-bgcolor;
+    border-bottom: $nav-border;
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+
+}
+
+ul#nav-bar-links {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+}
+
+#nav-bar-links li {
+    margin: 0 $nav-bar-link-margin;
+}

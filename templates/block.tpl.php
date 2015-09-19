@@ -46,14 +46,20 @@
 ?>
 <div id="<?php print $block_html_id; ?>" class="block <?php print $classes; ?>">
 
-<?php if ( $block->subject ) : ?>
+    <?php if ( isset($block->subject) ) : ?>
 
-  <div class="title">
-      <h3><?php print $block->subject; ?></h3>
-  </div>
+        <div class="title">
+            <h3><?php print $block->subject; ?></h3>
+        </div>
 
-<?php endif;?>
-    <div class="block-content">
-        <?php print $content; ?>
-    </div>
+    <?php endif;?>
+
+    <?php if ( isset($content) ) : ?>
+
+        <div class="block-content">
+            <?php print $content; ?>
+        </div>
+
+    <?php endif; ?>
+
 </div> <!-- .block -->

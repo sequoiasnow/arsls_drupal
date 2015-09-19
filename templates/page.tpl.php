@@ -73,52 +73,68 @@
  */
 ?>
 
-    <?php print render($page['header']); ?>
+<?php print render( $page['header'] ); ?>
 
-    <?php if ($main_menu): ?>
-      <div class="layout">
-          <div id="nav-bar-container">
-              <a id="logo" href="<?php print $base_path; ?>" data-logo-src="<?php print file_exists($logo) ? $logo : ''; ?>"></a>
-              <div id="mobile-nav-button">
-                  <div class="line-1"></div>
-                  <div class="line-2"></div>
-                  <div class="line-3"></div>
-              </div>
-              <div id="nav-bar">
-                  <?php print theme('links__system_main_menu', array(
-                      'links' => $main_menu,
-                      'attributes' => array(
-                          'id' => 'origional-nav-bar-data',
-                          'class' => array()
-                      )
-                  )); ?>
-              </div>
-          </div>
-      </div>
-    <?php endif; ?>
+<?php if ( $main_menu ) : ?>
 
+    <nav id="nav-bar-container">
 
-<div class="layout">
+        <div class="vertical-center">
+            <?php print theme( 'links__system_main_menu' , array(
+                'links'      => $main_menu,
+                'attributes' => array(
+                    'id'    => 'nav-bar-links',
+                    'class' => array(),
+                ),
+            ) ); ?>
+        </div> <!-- .vertical-center -->
+
+        <div class="vertical-center">
+
+            <section id="mobile-nav-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </section> <!-- .mobile-nav-button -->
+
+        </div> <!-- .vertical-center -->
+
+    </nav> <!-- #nav-bar-container -->
+
+<?php endif; ?>
+
+<section id="drupal-messages">
+
     <?php print $messages; ?>
 
+</section>
 
-      <?php print render($page['content']); ?>
+<section id="page">
 
-      <?php if (isset($page['sidebar_first'])): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+    <?php if ( isset($page['below_content']) ) : ?>
 
-      <?php if (isset($page['sidebar_second'])): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+        <section id="content">
 
-	  <?php print render($page['below_content']); ?>
-</div>
+            <?php print render($page['content']); ?>
 
-    <div id="footer">
-      <?php print render($page['footer']); ?>
-    </div> <!-- /.section, /#footer -->
+        </section> <!-- #content -->
+
+    <?php endif; ?>
+
+    <?php if ( isset($page['below_content']) ) : ?>
+
+        <section id="below-content">
+
+            <?php print render($page['below_content']); ?>
+
+        </section> <!-- #below-content -->
+
+    <?php endif; ?>
+
+    <footer id="primary-footer">
+
+        <?php print render($page['footer']); ?>
+
+    </footer> <!-- #footer -->
+
+</section> <!-- #page -->

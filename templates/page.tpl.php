@@ -79,53 +79,82 @@
 
     <nav id="nav-bar-container">
 
+        <?php if ( $site_name ) : ?>
+
+            <div class="no-display">
+                <section id="site-title-container">
+
+                    <div class="site-title">
+                        <a class="no-style" href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+                    </div>
+
+                    <?php if ( $site_slogan ) : ?>
+
+                        <div class="site-slogan">
+                            <span><?php print $site_slogan; ?></span>
+                        </div>
+
+                    <?php endif; ?>
+
+                </section> <!-- #site-title-container -->
+            </div> <!-- .no-display -->
+
+        <?php endif; ?>
+
         <div class="vertical-center">
-            <?php print theme( 'links__system_main_menu' , array(
+            <?php
+            /**
+             * Print out the menu using drupal's theme function. The site title
+             * is placed in the middle of these links with javascript.
+             */
+            print theme( 'links__system_main_menu' , array(
                 'links'      => $main_menu,
                 'attributes' => array(
                     'id'    => 'nav-bar-links',
                     'class' => array(),
                 ),
-            ) ); ?>
+            ) );
+            ?>
         </div> <!-- .vertical-center -->
 
-        <div class="vertical-center">
+        <section id="nav-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </section> <!-- .mobile-nav-button -->
 
-            <section id="mobile-nav-button">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </section> <!-- .mobile-nav-button -->
-
-        </div> <!-- .vertical-center -->
 
     </nav> <!-- #nav-bar-container -->
 
 <?php endif; ?>
 
-<section id="drupal-messages">
-
-    <?php print $messages; ?>
-
-</section>
-
 <section id="page">
 
-    <?php if ( isset($page['below_content']) ) : ?>
+    <?php if ( isset( $page['below_content'] ) ) : ?>
 
         <section id="content">
 
-            <?php print render($page['content']); ?>
+            <?php if ( isset( $messages) ) : ?>
+
+                <section id="drupal-messages">
+
+                    <?php print $messages; ?>
+
+                </section>
+
+            <?php endif; ?>
+
+            <?php print render( $page['content'] ); ?>
 
         </section> <!-- #content -->
 
     <?php endif; ?>
 
-    <?php if ( isset($page['below_content']) ) : ?>
+    <?php if ( isset( $page['below_content'] ) ) : ?>
 
         <section id="below-content">
 
-            <?php print render($page['below_content']); ?>
+            <?php print render( $page['below_content'] ); ?>
 
         </section> <!-- #below-content -->
 
@@ -133,7 +162,7 @@
 
     <footer id="primary-footer">
 
-        <?php print render($page['footer']); ?>
+        <?php print render( $page['footer'] ); ?>
 
     </footer> <!-- #footer -->
 

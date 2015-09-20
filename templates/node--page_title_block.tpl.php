@@ -5,15 +5,21 @@ $icon = isset($node->field_page_title_icon['und']) ? $node->field_page_title_ico
 ?>
 
 <div class="column-container">
+
       <div class="column-1">
+
           <div class="column-image">
                  <div class="i-container">
                         <i class="fa fa-<?php print $icon; ?>"></i>
                  </div>
            </div> <!-- .column-image -->
+
            <h1><?php print $readable_title; ?></h1>
+           
            <div class="text-center text-middle">
                 <?php print $body_text; ?>
           </div> <!-- .text-center -->
+
      </div> <!-- .column-1 -->
+
 </div> <!-- .column-container -->

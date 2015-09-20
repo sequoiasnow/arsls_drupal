@@ -69,12 +69,37 @@
   width: 100%;
 }
 
+/* line 1, ../sass/base/_anchor.scss */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* line 1, ../sass/base/_body.scss */
 body, html {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+/* line 1, ../sass/base/_font.scss */
+body {
+  font-family: "PT Serif", serif;
+}
+
+/* line 5, ../sass/base/_font.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* line 1, ../sass/base/_no-display.scss */
+.no-display {
+  visibility: hidden;
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /* line 1, ../sass/elements/_nav-bar.scss */
@@ -87,6 +112,33 @@ body, html {
   height: 80px;
   background-color: white;
   border-bottom: 1px solid rgba(189, 195, 199, 0.6);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 14, ../sass/elements/_nav-bar.scss */
+#nav-bar-container a {
+  text-decoration: none;
+}
+
+/* line 21, ../sass/elements/_nav-bar.scss */
+#nav-bar-container .vertical-center {
+  width: 100%;
+}
+
+/* line 23, ../sass/elements/_nav-bar.scss */
+ul#nav-bar-links {
+  list-style-type: none;
+  width: 90vw;
+  width: calc(100% - 120px);
+  margin: 0;
+  padding: 0;
+  margin-left: 60px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -95,22 +147,37 @@ body, html {
   justify-content: space-between;
 }
 
-/* line 19, ../sass/elements/_nav-bar.scss */
-ul#nav-bar-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-}
-
-/* line 30, ../sass/elements/_nav-bar.scss */
+/* line 40, ../sass/elements/_nav-bar.scss */
 #nav-bar-links li {
   margin: 0 10px;
+}
+
+/* Navigation Mobile Button. */
+/* line 46, ../sass/elements/_nav-bar.scss */
+#nav-toggle {
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+/* line 52, ../sass/elements/_nav-bar.scss */
+#nav-toggle .line {
+  width: 100%;
+  height: 3px;
+  background-color: #34495e;
+  position: absolute;
+  left: 0;
+}
+/* line 63, ../sass/elements/_nav-bar.scss */
+#nav-toggle .line:nth-child(1) {
+  top: 0%;
+}
+/* line 63, ../sass/elements/_nav-bar.scss */
+#nav-toggle .line:nth-child(2) {
+  top: 33.33333%;
+}
+/* line 63, ../sass/elements/_nav-bar.scss */
+#nav-toggle .line:nth-child(3) {
+  top: 66.66667%;
 }
 
 /* No files to import found in pages/* */

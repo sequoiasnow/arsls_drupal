@@ -10,23 +10,56 @@
     background-color: $nav-bgcolor;
     border-bottom: $nav-border;
 
+    @include heading-font;
+    a { text-decoration: none; }
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+}
+
+#nav-bar-container .vertical-center { width: 100%; }
+
+ul#nav-bar-links {
+    list-style-type: none;
+
+    width: 90vw;
+    width: calc(100% - #{2 * $nav-bar-link-border-width});
+
+
+    margin: 0;
+    padding: 0;
+    margin-left: $nav-bar-link-border-width;
+
     @include display-flex;
     @include flex-direction(row);
     @include justify-content(space-between);
 
 }
 
-ul#nav-bar-links {
-    list-style-type: none;
-
-    margin: 0;
-    padding: 0;
-
-    @include display-flex;
-    @include flex-direction(row);
-    @include justify-content(flex-start);
-}
-
 #nav-bar-links li {
     margin: 0 $nav-bar-link-margin;
+}
+
+
+/* Navigation Mobile Button. */
+#nav-toggle {
+    width: $nav-toggle-size;
+    height: $nav-toggle-size;
+
+    position: relative;
+
+    .line {
+        width: 100%;
+        height: $nav-toggle-line-height;
+
+        background-color: $nav-toggle-line-color;
+
+        position: absolute;
+        left: 0;
+    }
+
+    @for $i from 1 through 3 {
+        .line:nth-child(#{$i}) { top: 100% / 3 * ($i - 1) }
+    }
 }

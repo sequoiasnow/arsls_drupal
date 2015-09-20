@@ -2,7 +2,7 @@
     $(document).ready(function() {
         $(window).scroll(function() {
             $window = $(this);
-            console.log($window.scrollTop());
+
             function handleElement(elem, side) {
                 $elem = $(elem);
 

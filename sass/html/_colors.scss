@@ -1,0 +1,6 @@
+.random-color { background-color: $grey; }
+
+// -1 ignores white
+@for $i from 1 through length($all-colors) - 1 {
+    .random-color:nth-child(#{$i}) { background-color: nth($all-colors, $i + 1); }
+}

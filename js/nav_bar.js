@@ -29,5 +29,39 @@ if ( $( '#site-title-container' ).length ) {
 }
 
 
+// Configure the showing of the extended menu.
+if ( $( '#nav-toggle').length ) {
+
+
+    // Shows or hides the extened navigation based off of clicks.
+    var removeEN = function( e ) {
+
+        var $container = $( '#expanded-navigation' );
+
+        if ( ( ! $container.is( e.target ) && $container.has( e.target ).length === 0 ) || $container.is( '#expanded-navigation-toggle' ) ) {
+            toggleEN( false );
+        }
+    }
+
+    var toggleEN = function( display ) {
+
+
+        if ( display === false ) {
+            $( 'body' ).removeClass( 'show-expanded-nav' );
+
+            $( document ).unbind( 'mouseup', removeEN );
+        } else {
+            $( 'body' ).addClass( 'show-expanded-nav' );
+
+            $( document ).bind( 'mouseup', removeEN );
+        }
+    }
+
+    $( '#nav-toggle' ).click( function() {
+        toggleEN( true );
+    } );
+
+}
+
 });
 })(jQuery);

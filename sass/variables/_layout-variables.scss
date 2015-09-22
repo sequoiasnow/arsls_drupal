@@ -4,8 +4,22 @@
  * noted that not all of these variables should be changed, if the variables are
  * relative then include that definition in the definition of the variable.
  */
-/*============= Navigation bar =============*/
+/*============= Navigation Bar =============*/
 $nav-height: 80px;
 $nav-toggle-size: 22px;
 $nav-toggle-line-height: 3px;
 $nav-bar-link-border-width: 60px;
+
+$expanded-navigation-width: 70vw;
+$expanded-navigation-max-width: 350px;
+
+/*============= Page Title Block =============*/
+$page-title-block-height: 40vh;
+$page-title-block-icon-size: 60px;
+
+
+/*============= Columns =============*/
+$column-container-width: 95%;
+$column-widget-gap: 14px;
+$column-widget-paddding: 10px;
+$column-widget-width: 350px;

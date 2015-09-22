@@ -3,7 +3,6 @@ description = A clean modern theme designed to be responsive for mobile as well 
 core = 7.x
 
 ; CSS
-stylesheets[all][] = https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
 stylesheets[all][] = stylesheets/main.css
 
 ; JS

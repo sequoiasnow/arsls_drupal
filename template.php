@@ -3,21 +3,14 @@
 /**
  * Implements hook_theme_preprocess_page().
  */
-function arsls_theme_preprocess_page(&$vars) {
-  if($vars['is_front']) {
-    # Add the javascript for the splashpage.
-    drupal_add_js(drupal_get_path('theme', 'arsls_theme') . '/js/splashpage.js', array(
-		'weight' => 10000,
-	    'scope'  => 'header',
-	    'group'  => JS_THEME,
-	));
+function arsls_theme_preprocess_page(&$variables) {
+  // Add in the seach bar.
+  $search_form             = drupal_get_form( 'search_form' );
+  $search_form_box         = drupal_render( $search_form );
+  $variables['search_box'] = $search_form_box;
 
-    # Add the main menu to the page.
-	$vars['main_menu'] = menu_main_menu();
-
-	# add the javascript for the FAQ animation -- needs a fix.
-//	drupal_add_js(drupal_get_path('theme', 'arsls_theme') . '/js/action_html.js');
-  } else if ((isset($vars['node']) && $vars['node']->type == 'animated_push_reveal') || (isset($vars['type']) && $vars['type'] == 'animated_push_reveal')) {
-        drupal_add_js(drupal_get_path('theme', 'arsls_theme') . '/js/action_html.js');
-  }
+  // Add font awesome cdn.
+  drupal_add_css( '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' , array(
+      'type' => 'external',
+  ) );
 }

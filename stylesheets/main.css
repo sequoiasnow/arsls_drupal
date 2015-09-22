@@ -7,9 +7,11 @@
  * name.
  */
 /*============= COLOR SCHEME =============*/
+/*============= Page =============*/
 /*============= Navigation Bar =============*/
 /* Relates to the allways visual side of the site */
 /* Relates to the more burger menu icon. */
+/* Relates to the extended navigation menu. */
 /**
  * @file.
  * Defines two variables which are used to determine fonts across the site.
@@ -30,12 +32,15 @@
  * noted that not all of these variables should be changed, if the variables are
  * relative then include that definition in the definition of the variable.
  */
-/*============= Navigation bar =============*/
+/*============= Navigation Bar =============*/
+/*============= Page Title Block =============*/
+/*============= Columns =============*/
 /**
  * @file.
  * Relates to all the various timing that is essential to the flow of the
  * sites animations and other features.
  */
+/*============= Navigation bar =============*/
 /**
  * @file.
  * Relates to various elements conncerning miscelanious styling for things
@@ -45,8 +50,172 @@
  * Relates to all the z-index's of the site, complete, can be used to change
  * z-index problems in scope
  */
-/* No files to import found in mixins/* */
-/* No files to import found in mixins/**\/* */
+/* line 50, ../sass/mixins/_column-layout.scss */
+.column-container {
+  width: 100%;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: right;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -moz-column-gap: 14px;
+  -webkit-column-gap: 14px;
+  column-gap: 14px;
+  -moz-column-width: 350px;
+  -webkit-column-width: 350px;
+  column-width: 350px;
+  -moz-page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  padding: 0;
+}
+/* line 20, ../sass/mixins/_column-layout.scss */
+.column-container article.post,
+.column-container article.widget,
+.column-container *[class^=column],
+.column-container .column {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 34, ../sass/mixins/_column-layout.scss */
+.column-container * {
+  display: block;
+}
+/* line 39, ../sass/mixins/_column-layout.scss */
+.column-container .entry-meta {
+  width: 100%;
+}
+/* line 42, ../sass/mixins/_column-layout.scss */
+.column-container .entry-meta * {
+  display: inline-block;
+}
+
+/**
+ * Makes content inside of a post show with full width.
+ */
+/**
+ * Makes a background image fill a container...
+ */
+/* line 1, ../sass/html/_colors.scss */
+.random-color {
+  background-color: #95a5a6;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(1) {
+  background-color: #bdc3c7;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(2) {
+  background-color: #95a5a6;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(3) {
+  background-color: #7f8c8d;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(4) {
+  background-color: #f1c40f;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(5) {
+  background-color: #f1c40f;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(6) {
+  background-color: #f1c40f;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(7) {
+  background-color: #f39c12;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(8) {
+  background-color: #e67e22;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(9) {
+  background-color: #d35400;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(10) {
+  background-color: #1abc9c;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(11) {
+  background-color: #3498db;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(12) {
+  background-color: #2980b9;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(13) {
+  background-color: #e74c3c;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(14) {
+  background-color: #e74c3c;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(15) {
+  background-color: #c0392b;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(16) {
+  background-color: #9b59b6;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(17) {
+  background-color: #9b59b6;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(18) {
+  background-color: #8e44ad;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(19) {
+  background-color: #2ecc71;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(20) {
+  background-color: #27ae60;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(21) {
+  background-color: #16a085;
+}
+
+/* line 5, ../sass/html/_colors.scss */
+.random-color:nth-child(22) {
+  background-color: #34495e;
+}
+
 /* line 1, ../sass/base/_align.scss */
 .vertical-center {
   display: -webkit-flex;
@@ -77,8 +246,6 @@ a {
 
 /* line 1, ../sass/base/_body.scss */
 body, html {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -178,6 +345,133 @@ ul#nav-bar-links {
 /* line 63, ../sass/elements/_nav-bar.scss */
 #nav-toggle .line:nth-child(3) {
   top: 66.66667%;
+}
+
+/* Navigation Extended Display */
+/* line 68, ../sass/elements/_nav-bar.scss */
+#expanded-navigation {
+  position: fixed;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  left: 100vw;
+  width: 70vw;
+  max-width: 350px;
+  background-color: #e74c3c;
+  top: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 86, ../sass/elements/_nav-bar.scss */
+body.show-expanded-nav #expanded-navigation {
+  -moz-transform: translateX(-70vw);
+  -ms-transform: translateX(-70vw);
+  -webkit-transform: translateX(-70vw);
+  transform: translateX(-70vw);
+}
+
+@media screen and (min-width: 500px) {
+  /* line 93, ../sass/elements/_nav-bar.scss */
+  body.show-expanded-nav #expanded-navigation {
+    -moz-transform: translateX(-350px);
+    -ms-transform: translateX(-350px);
+    -webkit-transform: translateX(-350px);
+    transform: translateX(-350px);
+  }
+}
+/* Page to not encompass nav bar space. */
+/* line 100, ../sass/elements/_nav-bar.scss */
+#page {
+  margin-top: 80px;
+}
+
+/* line 1, ../sass/elements/_page-title-block.scss */
+#page-title-block {
+  width: 100%;
+  min-height: 40vh;
+  position: relative;
+}
+
+/* line 8, ../sass/elements/_page-title-block.scss */
+#page-title-block .background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 20, ../sass/elements/_page-title-block.scss */
+#page-title-block .background-image img, #page-title-block .background-image .background-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 32, ../sass/elements/_page-title-block.scss */
+#page-title-block .container {
+  width: 100%;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: right;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -moz-column-gap: 14px;
+  -webkit-column-gap: 14px;
+  column-gap: 14px;
+  -moz-column-width: 350px;
+  -webkit-column-width: 350px;
+  column-width: 350px;
+  -moz-page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  padding: 0;
+}
+/* line 20, ../sass/mixins/_column-layout.scss */
+#page-title-block .container article.post,
+#page-title-block .container article.widget,
+#page-title-block .container *[class^=column],
+#page-title-block .container .main-icon, #page-title-block .container .main-text {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 34, ../sass/mixins/_column-layout.scss */
+#page-title-block .container * {
+  display: block;
+}
+/* line 39, ../sass/mixins/_column-layout.scss */
+#page-title-block .container .entry-meta {
+  width: 100%;
+}
+/* line 42, ../sass/mixins/_column-layout.scss */
+#page-title-block .container .entry-meta * {
+  display: inline-block;
+}
+
+/* line 38, ../sass/elements/_page-title-block.scss */
+#page-title-block .main-icon {
+  font-size: 60px;
+  color: white;
 }
 
 /* No files to import found in pages/* */

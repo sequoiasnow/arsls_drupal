@@ -73,97 +73,138 @@
  */
 ?>
 
-<?php print render( $page['header'] ); ?>
+<section id="site-wrapper">
 
-<?php if ( $main_menu ) : ?>
+    <?php if ( $main_menu ) : ?>
 
-    <nav id="nav-bar-container">
+        <nav id="nav-bar-container">
 
-        <?php if ( $site_name ) : ?>
+            <?php if ( $site_name ) : ?>
 
-            <div class="no-display">
-                <section id="site-title-container">
+                <div class="no-display">
+                    <section id="site-title-container">
 
-                    <div class="site-title">
-                        <a class="no-style" href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
-                    </div>
-
-                    <?php if ( $site_slogan ) : ?>
-
-                        <div class="site-slogan">
-                            <span><?php print $site_slogan; ?></span>
+                        <div class="site-title">
+                            <a class="no-style" href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
                         </div>
 
-                    <?php endif; ?>
+                        <?php if ( $site_slogan ) : ?>
 
-                </section> <!-- #site-title-container -->
-            </div> <!-- .no-display -->
+                            <div class="site-slogan">
+                                <span><?php print $site_slogan; ?></span>
+                            </div>
 
-        <?php endif; ?>
+                        <?php endif; ?>
 
-        <div class="vertical-center">
-            <?php
-            /**
-             * Print out the menu using drupal's theme function. The site title
-             * is placed in the middle of these links with javascript.
-             */
-            print theme( 'links__system_main_menu' , array(
-                'links'      => $main_menu,
-                'attributes' => array(
-                    'id'    => 'nav-bar-links',
-                    'class' => array(),
-                ),
-            ) );
-            ?>
-        </div> <!-- .vertical-center -->
-
-        <section id="nav-toggle">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </section> <!-- .mobile-nav-button -->
-
-
-    </nav> <!-- #nav-bar-container -->
-
-<?php endif; ?>
-
-<section id="page">
-
-    <?php if ( isset( $page['below_content'] ) ) : ?>
-
-        <section id="content">
-
-            <?php if ( isset( $messages) ) : ?>
-
-                <section id="drupal-messages">
-
-                    <?php print $messages; ?>
-
-                </section>
+                    </section> <!-- #site-title-container -->
+                </div> <!-- .no-display -->
 
             <?php endif; ?>
 
-            <?php print render( $page['content'] ); ?>
+            <div class="vertical-center">
+                <?php
+                /**
+                 * Print out the menu using drupal's theme function. The site title
+                 * is placed in the middle of these links with javascript.
+                 */
+                print theme( 'links__system_main_menu' , array(
+                    'links'      => $main_menu,
+                    'attributes' => array(
+                        'id'    => 'nav-bar-links',
+                        'class' => array(),
+                    ),
+                ) );
+                ?>
+            </div> <!-- .vertical-center -->
 
-        </section> <!-- #content -->
+            <section id="nav-toggle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </section> <!-- .mobile-nav-button -->
+
+
+            <section id="expanded-navigation">
+
+                <section id="expanded-navigation-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </section>
+
+                <?php if ( isset( $search_box ) ) : ?>
+
+                    <section id="navigation-search-toggle">
+
+                        <i class="icon fa fa-search"></i>
+
+                    </section><!-- #navigation-search-toggle -->
+
+                    <section id="navigation-search">
+
+                        <?php print $search_box; ?>
+
+                    </section> <!-- .navigation-search -->
+
+                <?php endif; ?>
+
+                <?php /* Content added using javascript. */ ?>
+                <section class="link-category"></section>
+
+            </section> <!-- #expanded-navigation -->
+
+        </nav> <!-- #nav-bar-container -->
 
     <?php endif; ?>
 
-    <?php if ( isset( $page['below_content'] ) ) : ?>
+    <section id="page">
 
-        <section id="below-content">
+        <section id="page-nav-spaceholder"></section>
 
-            <?php print render( $page['below_content'] ); ?>
+        <?php if ( isset( $page['header'] ) ) : ?>
+            <section id="header">
 
-        </section> <!-- #below-content -->
+                <?php print render( $page['header'] ); ?>
 
-    <?php endif; ?>
+            </section> <!-- #header -->
 
-    <footer id="primary-footer">
+        <?php endif; ?>
 
-        <?php print render( $page['footer'] ); ?>
+        <?php if ( isset( $page['content'] ) ) : ?>
 
-    </footer> <!-- #footer -->
+            <section id="content">
 
-</section> <!-- #page -->
+                <?php if ( isset( $messages) ) : ?>
+
+                    <section id="drupal-messages">
+
+                        <?php print $messages; ?>
+
+                    </section>
+
+                <?php endif; ?>
+
+                <?php print render( $page['content'] ); ?>
+
+            </section> <!-- #content -->
+
+        <?php endif; ?>
+
+        <?php if ( isset( $page['below_content'] ) ) : ?>
+
+            <section id="below-content">
+
+                <?php print render( $page['below_content'] ); ?>
+
+            </section> <!-- #below-content -->
+
+        <?php endif; ?>
+
+        <footer id="primary-footer">
+
+            <?php print render( $page['footer'] ); ?>
+
+        </footer> <!-- #footer -->
+
+    </section> <!-- #page -->
+
+</section> <!-- #site-wrapper  -->

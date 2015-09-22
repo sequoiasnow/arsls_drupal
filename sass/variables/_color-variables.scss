@@ -69,7 +69,8 @@ $all-colors: $white,
 @function random-color() {
     @return nth($all-colors, random(length($all-colors)));
 }
-
+/*============= Page =============*/
+$page-background-color: white;
 
 /*============= Navigation Bar =============*/
 
@@ -81,3 +82,6 @@ $nav-hovered-link: $darkgrey;
 /* Relates to the more burger menu icon. */
 $nav-toggle-bgcolor: rgba($darkpurple, 0.7);
 $nav-toggle-line-color: $black;
+
+/* Relates to the extended navigation menu. */
+$expanded-navigation-bgcolor: $red;

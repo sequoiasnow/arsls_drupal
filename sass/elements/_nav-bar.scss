@@ -63,3 +63,40 @@ ul#nav-bar-links {
         .line:nth-child(#{$i}) { top: 100% / 3 * ($i - 1) }
     }
 }
+
+/* Navigation Extended Display */
+#expanded-navigation {
+    position: fixed;
+
+    @include transition(all $expanded-navigation-transition-duration);
+
+    left: 100vw;
+    width: $expanded-navigation-width;
+    max-width: $expanded-navigation-max-width;
+    background-color: $expanded-navigation-bgcolor;
+
+    top: 0;
+
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+body.show-expanded-nav #expanded-navigation  {
+    @include transform( translateX(-$expanded-navigation-width) );
+}
+
+
+
+@media screen and (min-width: #{ 100vw / $expanded-navigation-width * $expanded-navigation-max-width }) {
+    body.show-expanded-nav #expanded-navigation {
+        @include transform( translateX(-$expanded-navigation-max-width) );
+    }
+}
+
+
+/* Page to not encompass nav bar space. */
+#page {
+    margin-top: $nav-height;
+}

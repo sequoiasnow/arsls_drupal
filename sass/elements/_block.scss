@@ -1,0 +1,23 @@
+.block {
+    @include clearfix;
+}
+
+.block:nth-child(2n) {
+    background-color: $block-bgcolor-even;
+}
+
+.block:nth-child(2n+1) {
+    background-color: $block-bgcolor-odd;
+}
+
+.block .title {
+    text-align: center;
+    @include heading-font;
+}
+
+/* Elements that mess up the sizing of blocks. */
+.block .title:not(.display-title) { display: none; }
+
+.display-title { display: block; }
+
+#block-system-main.block { display: none; }

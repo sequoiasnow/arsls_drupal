@@ -8,3 +8,10 @@ $nav-toggle-line-height: 3px;
 $nav-submenu-border-radius: 0;
 
 $nav-primary-menu-item-margin: 10px;
+
+
+/*============= Views =============*/
+/* All the views that are to be shown as column layouts. */
+$view-column-selectors: (
+    '.view-tech-transfer-sites'
+);

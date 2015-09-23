@@ -1,6 +1,42 @@
-.random-color { background-color: $grey; }
+$all-colors-map: (
+    'white-abs'  : white,
+    'white'      : $white,
+    'lightgrey'  : $lightgrey,
+    'grey'       : $grey,
+    'darkgrey'   : $darkgrey,
+    'lightyellow': $lightyellow,
+    'yellow'     : $yellow,
+    'darkyellow' : $darkyellow,
+    'lightorange': $lightorange,
+    'orange'     : $orange,
+    'darkorange' : $darkorange,
+    'lightblue'  : $lightblue,
+    'blue'       : $blue,
+    'darkblue'   : $darkblue,
+    'lightred'   : $lightred,
+    'red'        : $red,
+    'darkred'    : $darkred,
+    'lightpurple': $lightpurple,
+    'purple'     : $purple,
+    'darkpurple' : $darkpurple,
+    'lightgreen' : $lightgreen,
+    'green'      : $green,
+    'darkgreen'  : $darkgreen,
+    'black'      : $black,
+    'black-abs'  : black
+);
 
-// -1 ignores white
-@for $i from 1 through length($all-colors) - 1 {
-    .random-color:nth-child(#{$i}) { background-color: nth($all-colors, $i + 1); }
+@each $key, $val in $all-colors-map {
+    .color-#{$key} {
+        background-color: $val;
+    }
+}
+
+
+.light-text {
+    color: $light-text-color;
+}
+
+.dark-text {
+    color: $dark-text-color;
 }

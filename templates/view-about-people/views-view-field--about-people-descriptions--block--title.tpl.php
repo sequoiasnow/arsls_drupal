@@ -22,4 +22,6 @@
  * the view is modified.
  */
 ?>
-<?php print $output; ?>
+<div class="field">
+    <?php print $output; ?>
+</div>

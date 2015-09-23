@@ -29,16 +29,10 @@
 ?>
 
 
-  <?php if ($rows): ?>
-  	  <div class="splashpage-item-container">
-            <div class="splashpage-item">
-                <div class="splashpage-wraper">
-						<?php print $rows; ?>
-      			</div>
-      		</div>
-      </div>
-  <?php elseif ($empty): ?>
-    <div class="view-empty">
-      <?php print $empty; ?>
-    </div>
-  <?php endif; ?>
+<?php if ( $rows ) : ?>
+    <section class="about-people">
+
+        <?php print $rows; ?>
+        
+    </section>
+<?php endif; ?>

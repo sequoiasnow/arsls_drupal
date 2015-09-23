@@ -3,6 +3,8 @@
 
     min-height: $page-title-block-height;
     position: relative;
+
+    @extend .horizontal-center;
 }
 
 #page-title-block .background-image {
@@ -32,11 +34,27 @@
 #page-title-block .container {
     width: 100%;
 
-    @include column-layout( '.main-icon, .main-text' );
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(center);
 }
 
 #page-title-block .main-icon {
     font-size: $page-title-block-icon-size;
     color: $page-background-color;
 
+}
+
+#page-title-block .main-text {
+    width: $page-title-block-main-text-width;
+
+    .page-title {
+        font-size: $page-title-block-title-font-size;
+    }
+}
+
+#page-title-block .main-text,
+#page-title-block .main-icon {
+    z-index: 1;
+    margin: $page-title-block-element-margin;
 }

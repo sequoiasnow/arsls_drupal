@@ -8,12 +8,14 @@
  */
 ?>
 
-<?php for ($i = 0; $i < count($rows); $i += 3) { ?>
-	<div class="column-container">
-		<?php for ($k = $i; $k < $i + 3 && $k < count($rows); $k++) { ?>
-			<div class="column-<?php echo count($rows) > 3 ? 3 : count($rows); ?>">
-		  		<?php print $rows[$k]; ?>
-		  </div>
-		<?php } ?>
-	</div>
-<?php } ?>
+<div class="column-container">
+
+	<?php foreach ($rows as $id => $row): ?>
+
+		<div class="column about-person">
+			<?php print $row; ?>
+		</div>
+
+	<?php endforeach; ?>
+
+</div> <!-- .column-container -->

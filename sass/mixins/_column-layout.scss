@@ -19,7 +19,7 @@ $column-container-margin: (100% - $column-container-width) / 2;
 
     article.post,
     article.widget,
-    *[class^=column],
+    //*[class^=column],
     #{$column-identifier} {
         display: inline-block;
     //    background-color: $column-text-color;
@@ -48,6 +48,5 @@ $column-container-margin: (100% - $column-container-width) / 2;
 
 
 .column-container {
-    width: 100%;
     @include column-layout;
 }

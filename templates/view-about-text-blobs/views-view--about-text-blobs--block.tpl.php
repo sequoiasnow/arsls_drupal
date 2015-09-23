@@ -29,18 +29,11 @@
 ?>
 
 
-  <?php if ($rows): ?>
-  	  <div class="splashpage-item-container">
-            <div class="splashpage-item">
-                <div class="splashpage-wraper">
-                    <div class="column-container">
-						<?php print $rows; ?>
-					</div>
-      			</div>
-      		</div>
-      </div>
-  <?php elseif ($empty): ?>
-    <div class="view-empty">
-      <?php print $empty; ?>
-    </div>
-  <?php endif; ?>
+<?php if ( $rows ) : ?>
+
+<div class="column-container">
+<?php print $rows; ?>
+
+</div>
+
+<?php endif; ?>

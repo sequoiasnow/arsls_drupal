@@ -1,7 +1,7 @@
-$icon-background-color: #77C7D8;
+$about-tree-icon-background-color: #77C7D8;
 
-$icon-size: 100px;
-$icon-size-mobile: 25vw;
+$about-tree-icon-size: 100px;
+$about-tree-icon-size-mobile: 25vw;
 
 .about-tree {
     width: 60%;
@@ -15,13 +15,13 @@ $icon-size-mobile: 25vw;
     .central-line {
         position: absolute;
         height: 100%;
-        z-index: -100;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 50%;
         border-right: 1px solid rgba(200, 200, 200, 0.4);
 
-        @include breakpoint($medium) {
+        @media (max-width: $standard-breakpoint) {
             display: none;
         }
     }
@@ -32,11 +32,11 @@ $icon-size-mobile: 25vw;
         padding: 0;
     }
 
-    @include breakpoint($medium) {
+    @media (max-width: $standard-breakpoint) {
         width: 100%;
         margin: 0;
 
-        margin-bottom: $icon-size-mobile * 1.3;
+        margin-bottom: $about-tree-icon-size-mobile * 1.3;
     }
 
 }
@@ -60,20 +60,20 @@ $icon-size-mobile: 25vw;
 
     .content {
         width: 300px;
-        width: calc(47% - #{$icon-size / 2});
+        width: calc(47% - #{$about-tree-icon-size / 2});
     }
 
     .icon {
         @include opacity(0);
 
         position: absolute;
-        top: $icon-size / 2;
-        z-index: 100;
+        top: $about-tree-icon-size / 2;
+        z-index: 3;
 
         border-radius: 50%;
-        background-color: $icon-background-color;
-        height: $icon-size;
-        width: $icon-size;
+        background-color: $about-tree-icon-background-color;
+        height: $about-tree-icon-size;
+        width: $about-tree-icon-size;
         text-align: center;
 
         * {
@@ -81,15 +81,15 @@ $icon-size-mobile: 25vw;
         }
 
         i {
-            font-size: $icon-size / 1.5;
-            line-height: $icon-size / 0.95;
+            font-size: $about-tree-icon-size / 1.5;
+            line-height: $about-tree-icon-size / 0.95;
             color: white;
         }
     }
 
     &:nth-child(2n) {
         .icon {
-            left: 0.1 * $icon-size;
+            left: 0.1 * $about-tree-icon-size;
         }
 
         .content {
@@ -100,7 +100,7 @@ $icon-size-mobile: 25vw;
 
     &:nth-child(2n + 1) {
         .icon {
-            right: 0.1 * $icon-size;
+            right: 0.1 * $about-tree-icon-size;
         }
 
         .content {
@@ -109,18 +109,18 @@ $icon-size-mobile: 25vw;
         }
     }
 
-    @include breakpoint($medium) {
-        margin-bottom: $icon-size-mobile * 1.3;
+    @media (max-width: $standard-breakpoint) {
+        margin-bottom: $about-tree-icon-size-mobile * 1.3;
         overflow: visible;
 
         .icon {
             top: 110%;
-            width: $icon-size-mobile;
-            height: $icon-size-mobile;
+            width: $about-tree-icon-size-mobile;
+            height: $about-tree-icon-size-mobile;
 
             > i {
-                font-size: $icon-size-mobile / 1.5;
-                line-height: $icon-size-mobile;
+                font-size: $about-tree-icon-size-mobile / 1.5;
+                line-height: $about-tree-icon-size-mobile;
                 color: white;
             }
         }

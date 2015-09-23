@@ -16,6 +16,8 @@
     @include display-flex;
     @include flex-direction(row);
     @include justify-content(space-between);
+
+    z-index: $nav-z-index;
 }
 
 #nav-bar-container .vertical-center { width: 100%; }
@@ -93,6 +95,12 @@ body.show-expanded-nav #expanded-navigation  {
     body.show-expanded-nav #expanded-navigation {
         @include transform( translateX(-$expanded-navigation-max-width) );
     }
+}
+
+
+/* Mobile Navigation. */
+@media screen and (max-width: $nav-mobile-breakpoint) {
+    #nav-bar-links li[class^=menu] { display: none; }
 }
 
 

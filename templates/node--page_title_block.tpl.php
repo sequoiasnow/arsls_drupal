@@ -5,7 +5,7 @@ $icon = isset($node->field_page_title_icon['und']) ? $node->field_page_title_ico
 ?>
 
 
-<section id="page-title-block">
+<section id="page-title-block" class="light-text">
 
     <div class="background-image">
 
@@ -15,7 +15,7 @@ $icon = isset($node->field_page_title_icon['und']) ? $node->field_page_title_ico
 
         <?php else : ?>
 
-            <div class="background-color random-color"></div>
+            <div class="background-color color-black"></div>
 
         <?php endif; ?>
 

@@ -18,6 +18,13 @@ $font-blockquote: Georgia, serif;
     font-weight: bold;
 }
 
+@mixin subheading-font {
+    font-family: $font-headings;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: $darkgrey;
+}
+
 /*============= Navigation bar =============*/
 $nav-submenu-current-pagefont-size: 2.5em;
 $nav-submenu-current-letter-spacing: 0.5em;
@@ -31,3 +38,10 @@ $nav-site-title-font-small: 1.3rem;
 $nav-site-title-font-mobile: 1.2rem;
 
 $nav-mobile-more-font-size: 1.25em;
+
+
+/*============= Page Title Block =============*/
+$page-title-block-title-font-size: 4em;
+
+/*============= About People Descriptions =============*/
+$about-people-heading-font-size: 1.3em;

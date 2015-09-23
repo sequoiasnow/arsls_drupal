@@ -1,0 +1,3 @@
+#{to-string( $view-column-selectors, ', ' )} .view-content {
+    @include column-layout('.views-row');
+}

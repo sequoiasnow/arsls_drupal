@@ -66,11 +66,13 @@ $all-colors: $white,
              $darkgreen,
              $black;
 
-@function random-color() {
+@function randomColor() {
     @return nth($all-colors, random(length($all-colors)));
 }
 /*============= Page =============*/
 $page-background-color: white;
+$light-text-color: white;
+$dark-text-color: black;
 
 /*============= Navigation Bar =============*/
 
@@ -85,3 +87,10 @@ $nav-toggle-line-color: $black;
 
 /* Relates to the extended navigation menu. */
 $expanded-navigation-bgcolor: $red;
+
+/*============= About Tree =============*/
+$about-tree-icon-background-color: #77C7D8;
+
+/*============= Blocks =============*/
+$block-bgcolor-odd: white;
+$block-bgcolor-even: lighten($lightgrey, 20);

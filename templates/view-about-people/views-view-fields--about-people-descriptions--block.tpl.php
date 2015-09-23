@@ -24,7 +24,31 @@
  * @ingroup views_templates
  */
 ?>
-<?php print $fields['field_person_image']->content; ?>
-<?php print $fields['title']->content; ?>
-<?php if (isset($fields['field_position'])) { print $fields['field_position']->content; } ?>
-<?php print $fields['body']->content; ?>
+
+<div class="title-container">
+
+    <?php print $fields['title']->content; ?>
+
+</div>
+
+<div class="identifier-image">
+
+    <?php print $fields['field_person_image']->content; ?>
+
+</div>
+
+<?php if ( isset( $fields['field_position'] ) ) : ?>
+
+    <div class="position">
+
+        <?php print $fields['field_position']->content; ?>
+
+    </div>
+
+<?php endif; ?>
+
+<div class="person-bio">
+
+    <?php print $fields['body']->content; ?>
+
+</div>

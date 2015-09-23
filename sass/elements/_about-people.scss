@@ -1,0 +1,26 @@
+.about-people .about-person .title-container {
+    @include heading-font;
+    @include transition( all $about-people-transition-duration );
+
+    font-size: $about-people-heading-font-size;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.about-people .about-person .identifier-image {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about-people .about-person .position {
+    @include subheading-font;
+    text-align: left;
+}
